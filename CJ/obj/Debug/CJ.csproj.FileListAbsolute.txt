@@ -1,0 +1,9 @@
+F:\CJ\CJ\bin\Debug\CJ.exe.config
+F:\CJ\CJ\obj\Debug\CJ.csprojResolveAssemblyReference.cache
+F:\CJ\CJ\obj\Debug\CJ.Form1.resources
+F:\CJ\CJ\obj\Debug\CJ.Properties.Resources.resources
+F:\CJ\CJ\obj\Debug\CJ.csproj.GenerateResource.Cache
+F:\CJ\CJ\bin\Debug\CJ.exe
+F:\CJ\CJ\bin\Debug\CJ.pdb
+F:\CJ\CJ\obj\Debug\CJ.exe
+F:\CJ\CJ\obj\Debug\CJ.pdb
