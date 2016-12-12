@@ -36,6 +36,10 @@ namespace CJ
                     text = 465;
                 if (flag == 490)
                     text = 466;
+                if (flag == 350)
+                    text = 581;
+                if (flag == 160)
+                    text = 131;
                 if (!ZJ.ContainsKey(text))
                 {
                     this.BeginInvoke(new FC(UpdateLable), text.ToString(), flag);
@@ -61,7 +65,7 @@ namespace CJ
                 richTextBox1.Visible = true;
                 richTextBox2.Visible = true;
                 label1.Visible = false;
-                this.BackgroundImage = Image.FromFile(@"f:\CJ\3.jpg");
+                this.BackgroundImage = Image.FromFile(@"D:\CJ\3.jpg");
                 List<int> temp = new List<int>();
                 foreach(int i in ZJ.Keys)
                 {
@@ -71,8 +75,8 @@ namespace CJ
                 for(int i=0;i<50;i++)
                 {
                     flag++;
-                    richTextBox1.Text += temp[i].ToString().PadRight(6);
-                    if (flag == 3)
+                    richTextBox1.Text += temp[i].ToString().PadRight(9);
+                    if (flag == 4)
                     {
                         richTextBox1.Text += "\r\n";
                         flag = 0;
@@ -82,13 +86,14 @@ namespace CJ
                 for(int i=50;i<110;i++)
                 {
                     flag++;
-                    richTextBox2.Text += temp[i].ToString().PadRight(6);
-                    if (flag == 3)
+                    richTextBox2.Text += temp[i].ToString().PadRight(9);
+                    if (flag == 4)
                     {
                         richTextBox2.Text += "\r\n";
                         flag = 0;
                     }
                 }
+                richTextBox2.Text = richTextBox2.Text.Substring(0, richTextBox2.Text.Length - 1);
             }
         }
         private void UpdateLable(string text,int flag)
@@ -143,7 +148,7 @@ namespace CJ
         {
             pictureBox1.Visible = false;
             label1.Visible = true;
-            this.BackgroundImage = Image.FromFile(@"f:\CJ\2.jpg");
+            this.BackgroundImage = Image.FromFile(@"D:\CJ\2.jpg");
             Thread td = new Thread(new ThreadStart(cj));
             td.Start();
         }
