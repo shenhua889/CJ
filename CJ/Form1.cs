@@ -14,6 +14,7 @@ namespace CJ
         Dictionary<int, int> ZJ = new Dictionary<int, int>();
         private delegate void FC(string text, int flag);
         private delegate void RFC();
+        int[] cf = { 44,12,11,20,565,513,62,2,522,113,111,42,73,117,465,466,581,131};
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +28,8 @@ namespace CJ
             {
                 Random rd = new Random();
                 int text = rd.Next(minValue, maxValue);
+                if (Array.IndexOf(cf, text) != -1)
+                    continue;
                 flag++;
                 if (flag == 200)
                     text = 73;
@@ -50,6 +53,10 @@ namespace CJ
                     }
                     else
                         Thread.Sleep(30);
+                }
+                else
+                {
+                    flag -= 10;
                 }
             }
             this.BeginInvoke(new RFC(UpdateRich));
